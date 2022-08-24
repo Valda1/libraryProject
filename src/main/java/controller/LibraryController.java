@@ -6,7 +6,6 @@ import repository.DBManager;
 import repository.LibraryRepository;
 
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -116,8 +115,6 @@ public class LibraryController {
             System.out.println("Enter the ID of the book you want to borrow:");
             Integer bookID = scanner.nextInt();
             libraryRepository.borrowBookFromDB(bookID);
-            System.out.println("Book has been borrowed successfully!");
-            System.out.println(" ");
 
         } catch (Exception e) {
             System.out.println("Error occurred while borrowing a book: " + e);
